@@ -1,97 +1,149 @@
 package Workshop.HotelReservationSystem;
 
-public class Hotel {
-
-    String hotelName;
-    int weekdayRegularRate;
-    int weekendRegularRate;
-    int weekdayRewardRate;
-    int weekendRewardRate;
-    int rating;
-    int Total;
-
-
-    public Hotel(String hotelName, int weekdayRegularRate, int weekdayRewardRate, int weekendRegularRate,int weekendRewardRate,int rating) {
-        this.hotelName = hotelName;
-        this.weekdayRegularRate = weekdayRegularRate;
-        this.weekdayRewardRate = weekdayRewardRate;
-        this.weekendRegularRate = weekendRegularRate;
-        this.weekendRewardRate = weekendRewardRate;
-        this.rating = rating;
+class Hotel {
+    /**
+     * we are using enum for customer types.
+     * In hotel reservation system there are two types of customer
+     * 1) Regular
+     * 2) reward
+     */
+    enum customer {
+        REGULAR, REWARD;
     }
 
-    public String getHotelName() {
+    /**
+     * variables
+     */
+    String hotelName;
+    int rating;
+    int weekdayRate;
+    int weekendRate;
+    int specialWeekdayRate;
+    int specialWeekendRate;
+    int avgRate = weekdayRate + weekendRate;
 
+    /**
+     * create a parameterized constructor
+     * @param hotelName hotels name in hotel reservation system
+     * @param rating rating of hotel
+     * @param weekdayRate for customer
+     * @param weekendRate for customer
+     * @param specialWeekdayRate for customer
+     * @param specialWeekendRate for customer
+     */
+    public Hotel(String hotelName, int rating, int weekdayRate, int weekendRate, int specialWeekdayRate, int specialWeekendRate) {
+        /**
+         *  "this" keyword is used to refer to the current object.
+         */
+        this.hotelName = hotelName;
+        this.rating = rating;
+        this.weekdayRate = weekdayRate;
+        this.weekendRate = weekendRate;
+        this.specialWeekdayRate = specialWeekdayRate;
+        this.specialWeekendRate = specialWeekendRate;
+    }
+    /**
+     * 1) The get method returns the variable value, and the set method sets the value.
+     * 2) "this" keyword is used to refer to the current object.
+     */
+
+    /**
+     * The getAvgRate method returns the value of the variable avgRate.
+     * @return avgRate
+     */
+    public int getAvgRate() {
+        return avgRate;
+    }
+    /**
+     * The ssetAvgRate method takes a parameter (avgRate) and assigns it to the avgRate variable
+     * @param avgRate taking in this Hotel reservation system.
+     */
+    public void setAvgRate(int avgRate) {
+        this.avgRate = avgRate;
+    }
+
+    /**
+     * The getHotelName method returns the value of the variable hotelName.
+     * @return hotelName
+     */
+    public String getHotelName() {
         return hotelName;
     }
-
+    /**
+     * The setHotelName method takes a parameter (hotelName) and assigns it to the hotelName variable
+     * @param hotelName taking in this Hotel reservation system.
+     */
     public void setHotelName(String hotelName) {
-
         this.hotelName = hotelName;
     }
-
-    public int getWeekdayRegularRate() {
-
-        return weekdayRegularRate;
-    }
-
-    public void setWeekdayRegularRate(int weekdayRegularRate) {
-
-        this.weekdayRegularRate = weekdayRegularRate;
-    }
-
-    public int getWeekendRegularRate() {
-
-        return weekendRegularRate;
-    }
-
-    public void setWeekendRegularRate(int weekendRegularRate) {
-
-        this.weekendRegularRate = weekendRegularRate;
-    }
-
-    public void setTotal(int total) {
-        Total = total;
-    }
-
-    public int getTotal() {
-        return Total;
-    }
-
+    /**
+     * The getRating method returns the value of the variable rating.
+     * @return rating
+     */
     public int getRating() {
         return rating;
     }
-
+    /**
+     * The setRating method takes a parameter (rating) and assigns it to the rating variable
+     * @param rating taking in this Hotel reservation system.
+     */
     public void setRating(int rating) {
         this.rating = rating;
     }
-
-    public int getWeekdayRewardRate() {
-        return weekdayRewardRate;
+    /**
+     * The getWeekdayRate method returns the value of the variable weekdayRate.
+     * @return weekdayRate
+     */
+    public int getWeekdayRate() {
+        return weekdayRate;
     }
-
-    public void setWeekdayRewardRate(int weekdayRewardRate) {
-        this.weekdayRewardRate = weekdayRewardRate;
+    /**
+     * The setWeekdayRate method takes a parameter (weekdayRate) and assigns it to the weekdayRate variable
+     * @param weekdayRate taking in this Hotel reservation system.
+     */
+    public void setWeekdayRate(int weekdayRate) {
+        this.weekdayRate = weekdayRate;
     }
-
-    public int getWeekendRewardRate() {
-        return weekendRewardRate;
+    /**
+     * The getWeekendRate method returns the value of the variable weekendRate.
+     * @return weekendRate
+     */
+    public int getWeekendRate() {
+        return weekendRate;
     }
-
-    public void setWeekendRewardRate(int weekendRewardRate) {
-        this.weekendRewardRate = weekendRewardRate;
+    /**
+     * The setWeekendRate method takes a parameter (weekendRate) and assigns it to the weekendRate variable
+     * @param weekendRate taking in this Hotel reservation system.
+     */
+    public void setWeekendRate(int weekendRate) {
+        this.weekendRate = weekendRate;
     }
-
-    @Override
-    public String toString() {
-        return "Hotel{" +
-                "hotelName='" + hotelName + '\'' +
-                ", weekdayRegularRate=" + weekdayRegularRate +
-                ", weekendRegularRate=" + weekendRegularRate +
-                ", weekdayRewardRate=" + weekdayRewardRate +
-                ", weekendRewardRate=" + weekendRewardRate +
-                ", rating=" + rating +
-                '}';
+    /**
+     * The getSpecialWeekdayRate method returns the value of the variable specialWeekdayRate.
+     * @return specialWeekdayRate
+     */
+    public int getSpecialWeekdayRate() {
+        return specialWeekdayRate;
     }
-
+    /**
+     * The setSpecialWeekdayRate method takes a parameter (specialWeekdayRate) and assigns it to the specialWeekdayRate variable
+     * @param specialWeekdayRate taking in this Hotel reservation system.
+     */
+    public void setSpecialWeekdayRate(int specialWeekdayRate) {
+        this.specialWeekdayRate = specialWeekdayRate;
+    }
+    /**
+     * The getSpecialWeekendRate method returns the value of the variable  specialWeekendRat.
+     * @return specialWeekendRate
+     */
+    public int getSpecialWeekendRate() {
+        return specialWeekendRate;
+    }
+    /**
+     * The setSpecialWeekendRate method takes a parameter (specialWeekendRate) and assigns it to the specialWeekendRate variable
+     * @param specialWeekendRate taking in this Hotel reservation system.
+     */
+    public void setSpecialWeekendRate(int specialWeekendRate) {
+        this.specialWeekendRate = specialWeekendRate;
+    }
 }

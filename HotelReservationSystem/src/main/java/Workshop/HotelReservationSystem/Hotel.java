@@ -1,98 +1,71 @@
 package Workshop.HotelReservationSystem;
 
-public class Hotel {
+class Hotel {
+    enum customer {
+        REGULAR, REWARD;
+    }
 
     String hotelName;
-    int weekdayRegularRate;
-    int weekendRegularRate;
-    int weekdayRewardRate;
-    int weekendRewardRate;
     int rating;
-    int Total;
+    int weekdayRate;
+    int weekendRate;
+    int specialWeekdayRate;
+    int specialWeekendRate;
 
-
-    public Hotel(String hotelName, int weekdayRegularRate, int weekdayRewardRate, int weekendRegularRate,int weekendRewardRate,int rating) {
+    public Hotel(String hotelName, int rating, int weekdayRate, int weekendRate, int specialWeekdayRate, int specialWeekendRate) {
         this.hotelName = hotelName;
-        this.weekdayRegularRate = weekdayRegularRate;
-        this.weekdayRewardRate = weekdayRewardRate;
-        this.weekendRegularRate = weekendRegularRate;
-        this.weekendRewardRate = weekendRewardRate;
         this.rating = rating;
+        this.weekdayRate = weekdayRate;
+        this.weekendRate = weekendRate;
+        this.specialWeekdayRate = specialWeekdayRate;
+        this.specialWeekendRate = specialWeekendRate;
     }
 
     public String getHotelName() {
-
         return hotelName;
     }
-
+    
     public void setHotelName(String hotelName) {
-
         this.hotelName = hotelName;
     }
-
-    public int getWeekdayRegularRate() {
-
-        return weekdayRegularRate;
-    }
-
-    public void setWeekdayRegularRate(int weekdayRegularRate) {
-
-        this.weekdayRegularRate = weekdayRegularRate;
-    }
-
-    public int getWeekendRegularRate() {
-
-        return weekendRegularRate;
-    }
-
-    public void setWeekendRegularRate(int weekendRegularRate) {
-
-        this.weekendRegularRate = weekendRegularRate;
-    }
-
-    public void setTotal(int total) {
-        Total = total;
-    }
-
-    public int getTotal() {
-        return Total;
-    }
-
+    
     public int getRating() {
         return rating;
     }
-
+    
     public void setRating(int rating) {
         this.rating = rating;
     }
-
-    public int getWeekdayRewardRate() {
-        return weekdayRewardRate;
+    
+    public int getWeekdayRate() {
+        return weekdayRate;
     }
-
-    public void setWeekdayRewardRate(int weekdayRewardRate) {
-        this.weekdayRewardRate = weekdayRewardRate;
+    
+    public void setWeekdayRate(int weekdayRate) {
+        this.weekdayRate = weekdayRate;
     }
-
-    public int getWeekendRewardRate() {
-        return weekendRewardRate;
+    
+    public int getWeekendRate() {
+        return weekendRate;
     }
-
-    public void setWeekendRewardRate(int weekendRewardRate) {
-        this.weekendRewardRate = weekendRewardRate;
+    
+    public void setWeekendRate(int weekendRate) {
+        this.weekendRate = weekendRate;
     }
-
-    @Override
-    public String toString() {
-        return "Hotel{" +
-                "hotelName='" + hotelName + '\'' +
-                ", weekdayRegularRate=" + weekdayRegularRate +
-                ", weekendRegularRate=" + weekendRegularRate +
-                ", weekdayRewardRate=" + weekdayRewardRate +
-                ", weekendRewardRate=" + weekendRewardRate +
-                ", rating=" + rating +
-                '}';
+    
+    public int getSpecialWeekdayRate() {
+        return specialWeekdayRate;
     }
-
+    
+    public void setSpecialWeekdayRate(int specialWeekdayRate) {
+        this.specialWeekdayRate = specialWeekdayRate;
+    }
+    
+    public int getSpecialWeekendRate() {
+        return specialWeekendRate;
+    }
+    
+    public void setSpecialWeekendRate(int specialWeekendRate) {
+        this.specialWeekendRate = specialWeekendRate;
+    }
 }
-

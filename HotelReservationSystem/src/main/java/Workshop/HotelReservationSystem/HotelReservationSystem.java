@@ -31,6 +31,7 @@ public class HotelReservationSystem {
         System.out.println(" The cheapest hotel is " + hotelObjList.get(0).getHotelName() + ", Rating : " + hotelObjList.get(0).getRating() + ", Total Rates = $" + hotelObjList.get(0).getWeekdayRate() * 2);
         return (hotelObjList.get(0).getWeekdayRate() * 2);
     }
+
     public int findCheapestHotelForWeekdayAndWeekend(String d1, String d2) {
         int weekEnds = 0;
         DayOfWeek day1 = LocalDate.parse(d1).getDayOfWeek();
@@ -97,6 +98,7 @@ public class HotelReservationSystem {
             return hotelObjList.get(0).getWeekdayRate() + hotelObjList.get(0).getWeekendRate();
         }
     }
+
     public int findBestRatedHotel(String d1, String d2) {
         int weekEnds = 0;
         DayOfWeek day1 = LocalDate.parse(d1).getDayOfWeek();
@@ -128,6 +130,7 @@ public class HotelReservationSystem {
         HotelReservationSystem hotel = new HotelReservationSystem();
         hotel.addHotel();
         hotel.enterDates();
+
         hotel.findCheapestHotelForWeekdayAndWeekend("2020-09-11", "2020-09-12");
         hotel.findCheapestBestBestRatedHotel("2020-09-11", "2020-09-12");
         hotel.findBestRatedHotel("2020-09-11", "2020-09-12");

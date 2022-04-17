@@ -38,25 +38,25 @@ public class HotelReservationSystemTest {
     }
 
 
-	//UC5
-	@Test
-	public void givenRatingShouldReturnsThoseRatings() {
-		HotelReservationSystem obj = new  HotelReservationSystem();
-		obj.addHotel();
-		Assert.assertEquals(5, obj.hotelReservation.get("Ridgewood").getRating());
-		Assert.assertEquals(4, obj.hotelReservation.get("Bridgewood").getRating());
-		Assert.assertEquals(3, obj.hotelReservation.get("Lakewood").getRating());
-	}
+    //UC5
+    @Test
+    public void givenRatingShouldReturnsThoseRatings() {
+	HotelReservationSystem obj = new  HotelReservationSystem();
+	obj.addHotel();
+	Assert.assertEquals(5, obj.hotelReservation.get("Ridgewood").getRating());
+	Assert.assertEquals(4, obj.hotelReservation.get("Bridgewood").getRating());
+	Assert.assertEquals(3, obj.hotelReservation.get("Lakewood").getRating());
+    }
 
-	//UC6
-	@Test
-	public void givenDateRangeShouldReturnTheCheapestBestRatedHotel() {
-		HotelReservationSystem obj = new HotelReservationSystem();
-		obj.addHotel();
-		Assert.assertEquals(200, obj.findCheapestBestBestRatedHotel("2020-09-11", "2020-09-12"));
-	}
+   //UC6
+   @Test
+   public void givenDateRangeShouldReturnTheCheapestBestRatedHotel() {
+	HotelReservationSystem obj = new HotelReservationSystem();
+	obj.addHotel();
+	Assert.assertEquals(200, obj.findCheapestBestBestRatedHotel("2020-09-11", "2020-09-12"));
+   }
 
-	//UC7
+    //UC7
     @Test
     public void givenDateRangeShouldReturnTheBestRatedHotel() {
         HotelReservationSystem obj = new  HotelReservationSystem();

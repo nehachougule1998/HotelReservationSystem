@@ -4,7 +4,6 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
-
 public class HotelReservationSystem {
     Map<String, Hotel> hotelReservation = new HashMap<>();
 
@@ -31,6 +30,7 @@ public class HotelReservationSystem {
         System.out.println(" The cheapest hotel is " + hotelObjList.get(0).getHotelName() + ", Rating : " + hotelObjList.get(0).getRating() + ", Total Rates = $" + hotelObjList.get(0).getWeekdayRate() * 2);
         return (hotelObjList.get(0).getWeekdayRate() * 2);
     }
+
     public int findCheapestHotelForWeekdayAndWeekend(String d1, String d2) {
         int weekEnds = 0;
         DayOfWeek day1 = LocalDate.parse(d1).getDayOfWeek();

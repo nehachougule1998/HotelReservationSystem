@@ -12,7 +12,7 @@ class Hotel {
     int specialWeekdayRate;
     int specialWeekendRate;
     int avgRate;
-    
+
     public Hotel(String hotelName, int rating, int weekdayRate, int weekendRate, int specialWeekdayRate, int specialWeekendRate) {
         this.hotelName = hotelName;
         this.rating = rating;

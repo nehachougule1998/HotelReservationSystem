@@ -63,4 +63,14 @@ public class HotelReservationSystemTest {
         obj.addHotel();
         Assert.assertEquals(370, obj.findBestRatedHotel("2020-09-11", "2020-09-12"));
     }
+
+    //UC9
+    @Test
+    public void givenSpecialRateShouldReturnTheThoseHotelRate() {
+        HotelReservationSystem obj = new HotelReservationSystem();
+        obj.addHotel();
+        Assert.assertEquals(80, obj.hotelReservation.get("Lakewood").getSpecialWeekdayRate());
+        Assert.assertEquals(110, obj.hotelReservation.get("Bridgewood").getSpecialWeekdayRate());
+        Assert.assertEquals(100, obj.hotelReservation.get("Ridgewood").getSpecialWeekdayRate());
+    }
 }
